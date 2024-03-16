@@ -1,0 +1,2 @@
+export const ProjectDescription = "ElysianEcho is a visionary web development project that redefines the landscape of online communication, drawing inspiration from both cosmic realms and Greek mythology. This project envisions a messaging platform that transcends the ordinary, providing users with a celestial experience that echoes the divine beauty of the Elysian Fields."
+export const ProjectName = "ElysianEcho"
