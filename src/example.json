@@ -1,0 +1,57 @@
+[
+  {
+    "id": "chat1",
+    "chatType": "private",
+    "chats": [
+      {
+        "id": "private-chat-1",
+        "participants": [{
+            "id": "user1",
+            "name": "John Doe",
+            "avatar": "https://randomuser.me/api/port",
+          "unReadMessages": 2
+        }],
+        "lastMessage": "Are you coming to the party?",
+        "lastMessageTimestamp": "2024-08-30T15:00:00Z",
+        "lastMessageSender": "user2",
+        "messages": [
+          {
+            "id": "message1",
+            "sender": "user1",
+            "message": "Hello",
+            "timestamp": "2024-08-30T15:00:00Z"
+          },
+          {
+            "id": "message2",
+            "sender": "user2",
+            "message": "Hi",
+            "timestamp": "2024-08-30T15:00:00Z"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "group1",
+    "chatType": "group",
+    "chats": [
+      {
+        "id": "group-chat-1",
+        "participants": ["user1", "user2", "user3"],
+        "lastMessage": "Are you coming to the party?",
+        "lastMessageTimestamp": "2024-08-30T15:00:00Z",
+        "lastMessageSender": "user2"
+      }
+    ]
+  },
+  {
+    "id": "world",
+    "chatType": "world",
+    "lastMessage": "Are you coming to the party?",
+    "lastMessageTimestamp": "2024-08-30T15:00:00Z",
+    "lastMessageSender": "user2",
+    "messages": [
+
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+.recaptcha-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#rc-anchor-container {
+    background-color: aqua;
+}
+
+.recaptcha-container > div {
+    border-radius: 0.375rem; /* Matches shadcn/ui rounded corners */
+    overflow: hidden; /* Ensures the iframe respects the border radius */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* Subtle shadow to match shadcn/ui components */
+}
+
+.recaptcha-container iframe {
+    border: 1px solid hsl(var(--input)); /* Matches shadcn/ui input border */
+}
