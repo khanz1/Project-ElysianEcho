@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import AvatarUI from "@/features/user/components/AvatarUI";
 import { useFirebaseAuth } from "@/lib/firebase/hooks/useAuth";
 import { toast } from "sonner";
 import { useRouter } from "next/router";
@@ -40,8 +39,8 @@ export default function ChatList({ query }: ChatPageProps) {
   }, [auth.user?.uid]);
 
   return (
-    <div className="relative h-full rounded py-3 overflow-hidden">
-      <h1 className="text-xl font-bold px-3">Chats</h1>
+    <div className="relative h-full rounded py-3">
+      <h1 className="text-xl font-bold px-3 text-accent-foreground">Chats</h1>
       <div className="flex flex-col gap-2 px-3 py-2 w-full">
         {state.list.map(chat => (
           <ChatHistoryItem
@@ -52,15 +51,17 @@ export default function ChatList({ query }: ChatPageProps) {
           />
         ))}
       </div>
-      <div className="absolute bottom-0 bg-neutral-800 w-full">
-        <div className="flex items-center rounded-lg px-5 py-2">
-          <AvatarUI
-            pictureUrl={auth.user?.photoURL ?? undefined}
-            fallbackText={auth.user?.displayName ?? "X"}
-          />
-          <p className="ml-2">{auth.user?.displayName}</p>
-        </div>
-      </div>
+      {/*<div className="absolute bottom-0 bg-muted-darker w-full">*/}
+      {/*  <div className="flex items-center px-5 py-2">*/}
+      {/*    <AvatarUI*/}
+      {/*      pictureUrl={auth.user?.photoURL ?? undefined}*/}
+      {/*      fallbackText={auth.user?.displayName ?? "X"}*/}
+      {/*    />*/}
+      {/*    <p className="ml-2 text-accent-foreground">*/}
+      {/*      {auth.user?.displayName}*/}
+      {/*    </p>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </div>
   );
 }

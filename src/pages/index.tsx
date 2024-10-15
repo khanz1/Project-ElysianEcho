@@ -28,14 +28,14 @@ export default function ChatPage({ query }: ChatPageProps) {
   return (
     <main className="h-screen">
       <div className="grid grid-cols-12 h-full">
-        <div className="hidden sm:block sm:col-span-6 md:col-span-5 lg:col-span-3 border-r-4 border-neutral-900">
+        <div className="hidden sm:block sm:col-span-6 md:col-span-5 lg:col-span-3 border-r-2 border-muted-darker bg-background">
           {query.sidebarTab === "chat" ? (
             <ChatList query={query} />
           ) : (
             <ContactList />
           )}
         </div>
-        <div className="col-span-12 sm:col-span-6 md:col-span-7 lg:col-span-9 bg-neutral-950 relative">
+        <div className="col-span-12 sm:col-span-6 md:col-span-7 lg:col-span-9 bg-background relative">
           {query.type === "private" ? (
             <PrivateChatBox query={query} />
           ) : (

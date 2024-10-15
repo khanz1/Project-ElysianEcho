@@ -39,13 +39,15 @@ export default function ContactList() {
 
   return (
     <div className="relative h-full rounded py-3 overflow-hidden">
-      <h1 className="text-xl font-bold px-3">Contacts</h1>
+      <h1 className="text-xl font-bold px-3 text-accent-foreground">
+        Contacts
+      </h1>
       <div className="flex flex-col gap-2 px-3 py-2 w-full">
         {state.list.map(user => (
           <button
             onClick={() => handleOnChat(user)}
             key={user.uid}
-            className="flex items-center hover:bg-neutral-900 rounded-lg px-3 py-2"
+            className="flex items-center hover:bg-muted-darker rounded-lg px-3 py-2"
           >
             <AvatarUI
               pictureUrl={user.photoURL?.toString() ?? undefined}
@@ -55,15 +57,17 @@ export default function ContactList() {
           </button>
         ))}
       </div>
-      <div className="absolute bottom-0 bg-neutral-800 w-full">
-        <div className="flex items-center rounded-lg px-5 py-2">
-          <AvatarUI
-            pictureUrl={auth.user?.photoURL?.toString() ?? undefined}
-            fallbackText={auth.user?.displayName ?? "X"}
-          />
-          <p className="ml-2">{auth.user?.displayName}</p>
-        </div>
-      </div>
+      {/*<div className="absolute bottom-0 bg-muted-darker w-full">*/}
+      {/*  <div className="flex items-center rounded-lg px-5 py-2">*/}
+      {/*    <AvatarUI*/}
+      {/*      pictureUrl={auth.user?.photoURL?.toString() ?? undefined}*/}
+      {/*      fallbackText={auth.user?.displayName ?? "X"}*/}
+      {/*    />*/}
+      {/*    <p className="ml-2 text-accent-foreground">*/}
+      {/*      {auth.user?.displayName}*/}
+      {/*    </p>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </div>
   );
 }

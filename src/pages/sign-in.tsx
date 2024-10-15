@@ -29,6 +29,7 @@ import {
   StorageKeys,
   useAuthStore,
 } from "@/features/auth/auth.store";
+import { handleError } from "@/utils/error-handler.helpers";
 
 export default function SignIn() {
   const router = useRouter();
@@ -44,8 +45,12 @@ export default function SignIn() {
   }, []);
 
   const handleOAuthLogin = async (provider: AuthProvider) => {
-    await signInOAuth(provider);
-    await router.replace("/");
+    try {
+      await signInOAuth(provider);
+      await router.replace("/");
+    } catch (err) {
+      return handleError(err);
+    }
   };
 
   return (

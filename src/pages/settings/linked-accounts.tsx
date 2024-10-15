@@ -88,16 +88,16 @@ export const LinkedAccount = ({
       <div
         onClick={() => onLinkProvider(provider.providerId)}
         className={cn(
-          "flex items-center justify-between hover:bg-neutral-900 hover:cursor-pointer p-2 hover:rounded-md",
+          "flex items-center justify-between hover:bg-muted-darker hover:cursor-pointer p-2 hover:rounded-md",
           provider.isLoading ? "blur-sm bg-white/30 animate-pulse" : "",
         )}
       >
         <div className="flex items-center">
-          <div className="w-10 h-10 flex items-center justify-center rounded-md bg-neutral-800 text-primary">
+          <div className="w-10 h-10 flex items-center justify-center rounded-md bg-muted text-primary">
             {provider.icon}
           </div>
           <div className="ml-3">
-            <h4 className="text-md font-medium capitalize">
+            <h4 className="text-md font-medium capitalize text-accent-foreground">
               {provider.providerName}
             </h4>
             <p className="text-sm text-muted-foreground">
@@ -342,7 +342,9 @@ export default function SettingsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h3 className="text-lg font-medium">Linked Accounts</h3>
+        <h3 className="text-lg font-medium text-accent-foreground">
+          Linked Accounts
+        </h3>
         <p className="text-sm text-muted-foreground">
           Link your account to other providers to login with them.
         </p>

@@ -17,8 +17,8 @@ export const ChatHistoryItem = (props: ChatHistoryItemProps) => {
     <button
       onClick={props.onClick}
       className={cn(
-        "flex w-full rounded-md items-center hover:bg-neutral-800 py-2 px-3",
-        props.activeChat && "bg-neutral-800",
+        "flex w-full rounded-md items-center hover:bg-muted-darker py-2 px-3",
+        props.activeChat && "bg-muted-darker",
       )}
     >
       <AvatarUI
@@ -27,12 +27,12 @@ export const ChatHistoryItem = (props: ChatHistoryItemProps) => {
       />
       <div className="w-full flex flex-col items-start pl-3 min-w-0">
         <div className="flex justify-between items-center w-full">
-          <div className="text-neutral-200">{user.displayName}</div>
-          <p className="text-sm text-neutral-400 uppercase text-right">
+          <div className="text-accent-foreground">{user.displayName}</div>
+          <p className="text-sm text-muted-foreground uppercase text-right">
             {getTimeMessage(chat.lastMessageTime?.toDate())}
           </p>
         </div>
-        <p className="text-sm text-neutral-400 truncate w-full text-left">
+        <p className="text-sm text-muted-foreground truncate w-full text-left">
           {chat.lastMessage}
         </p>
       </div>

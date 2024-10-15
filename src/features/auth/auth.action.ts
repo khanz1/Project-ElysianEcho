@@ -21,7 +21,6 @@ import {
 
 export const signInOAuth = async (provider: AuthProvider) => {
   const userCredential = await signInWithPopup(firebaseAuth, provider);
-
   try {
     const user = await fetchUserByUID(userCredential.user.uid);
 

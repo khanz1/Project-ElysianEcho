@@ -22,7 +22,7 @@ export const MessageBubble = (props: MessageBubbleProps) => {
       <div
         className={cn(
           chat.type === "file" ? "p-1" : "px-2 py-1",
-          "bg-neutral-800 rounded-xl flex max-w-2xl",
+          "bg-muted-darker rounded-xl flex max-w-2xl",
         )}
       >
         {chat.type === "file" ? (
@@ -34,23 +34,23 @@ export const MessageBubble = (props: MessageBubbleProps) => {
               height={250}
               className="rounded-lg"
             />
-            <p className="px-2 text-sm rounded text-neutral-100 line-clamp-6 break-words">
+            <p className="px-2 text-sm rounded text-accent-foreground line-clamp-6 break-words">
               {chat.message}
             </p>
 
-            <p className="absolute bottom-0 right-0 text-neutral-100 text-xxs self-end mx-3 my-1 uppercase">
+            <p className="absolute bottom-0 right-0 text-accent-foreground text-xxs self-end mx-3 my-1 uppercase">
               {getTimeMessage(chat.createdAt.toDate())}
             </p>
           </div>
         ) : (
           <>
-            <p className="px-2 text-sm rounded text-neutral-100 line-clamp-6 break-words">
+            <p className="px-2 text-sm rounded text-accent-foreground line-clamp-6 break-words">
               {chat.message}
               {chat.isEdited && (
                 <span className="text-xs px-2 text-gray-400">Edited</span>
               )}
             </p>
-            <p className="text-neutral-100 text-xxs self-end uppercase">
+            <p className="text-accent-foreground text-xxs self-end uppercase">
               {getTimeMessage(chat.createdAt.toDate())}
             </p>
           </>

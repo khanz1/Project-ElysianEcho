@@ -165,7 +165,7 @@ export const ChatInputForm = React.forwardRef<HTMLInputElement, ChatFormProps>(
               size="icon"
               variant="ghost"
               aria-label="Upload file"
-              className="rounded-full p-2"
+              className="rounded-full text-accent-foreground p-2"
             >
               <PlusIcon />
             </Button>
@@ -183,15 +183,15 @@ export const ChatInputForm = React.forwardRef<HTMLInputElement, ChatFormProps>(
                 ref={inputRef}
                 type="text"
                 id="chat-input"
-                className="px-3 py-1 rounded-full text-sm w-full text-neutral-100 bg-neutral-800 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-primary"
+                className="px-3 py-1 rounded-full text-sm w-full text-accent-foreground bg-background ring-muted-darker focus:outline-none ring-2 focus:ring-primary"
                 value={message}
                 onChange={e => setMessage(e.target.value)}
               />
               <button
                 type="submit"
                 className={cn(
-                  "bg-primary p-2 rounded-full transition-all duration-500",
-                  isDisabled && "bg-neutral-700 cursor-not-allowed",
+                  "bg-muted text-accent-foreground p-2 rounded-full transition-all duration-500",
+                  isDisabled && "cursor-not-allowed text-muted-foreground",
                 )}
                 disabled={isDisabled}
               >

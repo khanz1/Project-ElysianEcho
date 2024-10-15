@@ -51,7 +51,7 @@ const InteractiveIcon = ({
       {...props}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="cursor-pointer hover:bg-neutral-800 rounded p-2"
+      className="cursor-pointer hover:bg-muted-darker text-accent-foreground rounded p-2"
     >
       {isHovered ? IconFilled : Icon}
     </div>
@@ -80,7 +80,7 @@ export default function MenuBar() {
   };
 
   return (
-    <section className="bg-neutral-900 h-full w-full">
+    <section className="bg-muted h-full w-full">
       <nav className="h-full flex justify-center py-5 px-2">
         <div className="flex flex-col justify-between h-full">
           <div className="flex flex-col gap-2">

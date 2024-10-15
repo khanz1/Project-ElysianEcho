@@ -98,7 +98,7 @@ export function ProfileForm() {
   }
   return (
     <>
-      <h5 className="mb-0">Profile Picture</h5>
+      <h5 className="mb-0 text-accent-foreground">Profile Picture</h5>
       <p className="text-[0.8rem] mt-0 text-neutral-500 dark:text-neutral-400">
         Choose a profile photo to represent yourself on the site. You can update
         or remove this photo anytime
@@ -106,7 +106,7 @@ export function ProfileForm() {
       <div className="flex gap-5 items-center">
         <Avatar className="w-20 h-20">
           <AvatarImage src={imageUrl} />
-          <AvatarFallback>AM</AvatarFallback>
+          <AvatarFallback className="text-accent-foreground">AM</AvatarFallback>
         </Avatar>
         <UploadFileButton onFileChange={setFile}>Upload</UploadFileButton>
       </div>
@@ -117,7 +117,9 @@ export function ProfileForm() {
             name="displayName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Full Name</FormLabel>
+                <FormLabel className="text-accent-foreground">
+                  Full Name
+                </FormLabel>
                 <FormControl>
                   <Input placeholder="your name..." {...field} />
                 </FormControl>
@@ -134,7 +136,7 @@ export function ProfileForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel className="text-accent-foreground">Email</FormLabel>
                 <FormControl>
                   <Input placeholder="your email..." {...field} />
                 </FormControl>
@@ -151,7 +153,7 @@ export function ProfileForm() {
             name="bio"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Bio</FormLabel>
+                <FormLabel className="text-accent-foreground">Bio</FormLabel>
                 <FormControl>
                   <Textarea
                     placeholder="Tell us a little bit about yourself"

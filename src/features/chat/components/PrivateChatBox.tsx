@@ -88,7 +88,7 @@ export const PrivateChatBox = ({ query }: ChatPageProps) => {
   };
 
   return (
-    <section className="bg-neutral-950 h-full rounded overflow-hidden">
+    <section className="bg-background h-full rounded overflow-hidden">
       <ScrollArea className="h-screen">
         <div className="flex flex-col gap-2 px-3 py-3 pb-16">
           {messages.list.map((chat, idx) => {
@@ -140,7 +140,7 @@ export const PrivateChatBox = ({ query }: ChatPageProps) => {
 
       <div
         id="chat-box"
-        className="absolute bottom-0 bg-neutral-900 py-3 w-full px-3"
+        className="absolute bottom-0 bg-muted-darker py-3 w-full px-3"
       >
         {formMode === "edit" && (
           <div className="px-10 py-2">

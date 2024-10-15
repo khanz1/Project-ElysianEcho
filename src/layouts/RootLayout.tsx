@@ -16,7 +16,7 @@ const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
           <div>
             <MenuBar />
           </div>
-          <div className="relative w-full bg-neutral-950">
+          <div className="relative w-full bg-background">
             <ScrollArea className="h-screen">{children}</ScrollArea>
           </div>
         </div>
